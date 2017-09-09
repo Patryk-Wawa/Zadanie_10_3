@@ -1,8 +1,8 @@
 $(function(){
 	var carouselList = $("#carousel ul");
-	setInterval(changeSlide,5000);
+	setInterval(changeSlide, 5000);
 	function changeSlide(){
-		carouselList.animate({marginLeft:-600},1000,placeFirstSlideAfterLast);
+		carouselList.animate({marginLeft: -600}, 1000, placeFirstSlideAfterLast);
 	}
 
 	function placeFirstSlideAfterLast(){
@@ -17,7 +17,7 @@ $(function(){
 		var last = carouselList.find('li:last');
 		var first = carouselList.find('li:first');
 		first.before(last);
-		carouselList.css({marginLeft:-600});
-		carouselList.animate({marginLeft:0},1000);
+		carouselList.css({marginLeft: -600});
+		carouselList.animate({marginLeft: 0}, 1000);
 	});
 });
